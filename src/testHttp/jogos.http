@@ -1,0 +1,18 @@
+@url =  https://8080-amabiliemabi-gamesvivi-4ycd719e57w.ws-us116.gitpod.io
+
+Get {{url}}/jogos
+
+###
+
+Get{{url}}/jogos/1
+
+###
+POST  {{url}}/jogos
+Content-Type: application/json
+
+{
+    "titulo": "Vampire Survivors",
+    "plataformas" : [
+        {"id" : 1}
+    ]
+}
