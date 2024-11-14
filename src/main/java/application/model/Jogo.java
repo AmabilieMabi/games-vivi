@@ -14,6 +14,7 @@ import jakarta.persistence.ManyToMany;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import application.record.JogoDTO;
 
 @Entity
 @Getter
@@ -31,4 +32,10 @@ public class Jogo {
         joinColumns = @JoinColumn(name = "id_jogo"),
         inverseJoinColumns = @JoinColumn(name = "id_plataforma"))
     private Set<Plataforma> plataformas = new HashSet<Plataforma>();
+
+    public Jogo(JogoDTO jogo){
+        this.id = jogo.id();
+        this.titulo = jogo.titulo();
+        this.plataformas = jogo.plataformas();
+    }
 }
